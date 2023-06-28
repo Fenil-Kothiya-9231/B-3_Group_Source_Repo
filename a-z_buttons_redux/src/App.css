@@ -1,0 +1,35 @@
+.App {
+  display:flex;
+} 
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 40vw;
+  margin: 1rem auto;
+}
+
+.img{
+  padding: 15px;
+  width: 250px;
+  height:250px;
+  border: 2px solid black;
+
+}
+.data{
+  padding: 10px;
+  border: 2px solid black;
+}
+.name{
+  padding: 10px;
+
+}
+.discription{
+  padding: 10px;
+}
