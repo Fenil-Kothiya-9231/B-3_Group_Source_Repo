@@ -1,0 +1,79 @@
+#communityContainer {
+    margin-bottom: 2rem;
+}
+
+#communityContainer .tabItems {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+
+#communityContainer .tabItems .tabItem {
+    border: 2px solid black;
+    padding: 1rem;
+    cursor: pointer;
+    width: 12rem;
+}
+
+#communityContainer .tabItems .tabItem:hover {
+    color: gray;
+}
+
+#communityContainer div.tabItems div.activeItab {
+    background-color: navy;
+    color: white;
+    border-color: tomato;
+}
+
+#communityContainer div.tabItems div.activeItab:hover {
+    color: wheat;
+}
+
+#communityContainer .tabComponent {
+    border: 2px solid tomato;
+    padding: 1rem;
+    width: 80vw;
+    margin: 0px auto;
+}
+
+#viewMembers .interestItem {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+}
+
+#volunteersList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+#volunteersList section {
+    border: 2px solid darkcyan;
+    border-radius: 1rem;
+   
+}
+
+#volunteersList section div.title {
+    color: #0a156f;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid black;
+    border-radius: 1rem 1rem 0px 0px;
+    padding: 0.5rem;
+    text-align: center;
+    background: aliceblue;
+    font-weight: bold;
+}
+
+#volunteersList section div.content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+}
