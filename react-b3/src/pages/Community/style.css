@@ -1,8 +1,8 @@
-#communityContainer {
+#COMMUNITYContainer {
     margin-bottom: 2rem;
 }
 
-#communityContainer .tabItems {
+#COMMUNITYContainer .tabItems {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -10,28 +10,28 @@
 }
 
 
-#communityContainer .tabItems .tabItem {
+#COMMUNITYContainer .tabItems .tabItem {
     border: 2px solid black;
     padding: 1rem;
     cursor: pointer;
     width: 12rem;
 }
 
-#communityContainer .tabItems .tabItem:hover {
+#COMMUNITYContainer .tabItems .tabItem:hover {
     color: gray;
 }
 
-#communityContainer div.tabItems div.activeItab {
+#COMMUNITYContainer div.tabItems div.activeItab {
     background-color: navy;
     color: white;
     border-color: tomato;
 }
 
-#communityContainer div.tabItems div.activeItab:hover {
+#COMMUNITYContainer div.tabItems div.activeItab:hover {
     color: wheat;
 }
 
-#communityContainer .tabComponent {
+#COMMUNITYContainer .tabComponent {
     border: 2px solid tomato;
     padding: 1rem;
     width: 80vw;

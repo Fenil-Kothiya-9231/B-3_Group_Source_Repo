@@ -1,3 +1,3 @@
-import { community } from './component';
+import { COMMUNITY } from './component';
 
-export default community;
+export default COMMUNITY;
