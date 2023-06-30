@@ -1,6 +1,6 @@
 import React from 'react';
 import "./styles.css";
-import COMMUNITY from './pages/COMMUNITY';
+import COMMUNITY from './pages/Community';
 
 export default function App() {
 
