@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import RadioInput from "./RadioInput";
+import TextInput from "./TextInput";
+import CheckboxGroup from "./CheckboxGroup";
+
 
 const Form = ({ onSubmit }) => {
   const [name, setName] = useState("");
@@ -10,84 +14,57 @@ const Form = ({ onSubmit }) => {
     e.preventDefault();
     const formData = { name, email, gender, interests };
     onSubmit(formData);
+    setName("");
+    setEmail("");
+    setGender("");
+    setInterests([]);
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
+      <TextInput 
+        label="Name:"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <TextInput
+        label="Email:"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
 
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
+      <RadioInput
+        label="Gender:"
+        name="gender"
+        options={[
+          { label: "Male", value: "male" },
+          { label: "Female", value: "female" },
+          { label: "Other", value: "other" },
+        ]}
+        selectedValue={gender}
+        onChange={(e) => setGender(e.target.value)}
+      />
 
-      <label>
-        Gender:
-        <select value={gender} onChange={(e) => setGender(e.target.value)}>
-          <option value="">Select Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-      </label>
-
-      <label>
-        Interests:
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              value="sports"
-              checked={interests.includes("sports")}
-              onChange={(e) =>
-                setInterests((prevInterests) =>
-                  e.target.checked
-                    ? [...prevInterests, "sports"]
-                    : prevInterests.filter((interest) => interest !== "sports")
-                )
-              }
-            />
-            Sports
-          </label>
-        </div>
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              value="music"
-              checked={interests.includes("music")}
-              onChange={(e) =>
-                setInterests((prevInterests) =>
-                  e.target.checked
-                    ? [...prevInterests, "music"]
-                    : prevInterests.filter((interest) => interest !== "music")
-                )
-              }
-            />
-            Music
-          </label>
-        </div>
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              value="reading"
-              checked={interests.includes("reading")}
-              onChange={(e) =>
-                setInterests((prevInterests) =>
-                  e.target.checked
-                    ? [...prevInterests, "reading"]
-                    : prevInterests.filter((interest) => interest !== "reading")
-                )
-              }
-            />
-            Reading
-          </label>
-        </div>
-      </label>
+      <CheckboxGroup  
+        label=""
+        name="interests"
+        options={[
+          { label: "Sports", value: "sports" },
+          { label: "Music", value: "music" },
+          { label: "Reading", value: "reading" },
+        ]}
+        selectedValues={interests}
+        onChange={(e) => {
+          const value = e.target.value;
+          setInterests((prevInterests) => {
+            if (prevInterests.includes(value)) {
+              return prevInterests.filter((interest) => interest !== value);
+            } else {
+              return [...prevInterests, value];
+            }
+          });
+        }}
+      />
 
       <button type="submit">Submit</button>
     </form>
