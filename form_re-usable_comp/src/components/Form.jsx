@@ -24,7 +24,7 @@ const Form = ({ onSubmit }) => {
     <form onSubmit={handleSubmit}>
       <TextInput 
         label="Name:"
-        value={name}
+        value={id}
         onChange={(e) => setName(e.target.value)}
       />
       <TextInput
@@ -46,7 +46,7 @@ const Form = ({ onSubmit }) => {
       />
 
       <CheckboxGroup  
-        label=""
+        label="Interests:"
         name="interests"
         options={[
           { label: "Sports", value: "sports" },
