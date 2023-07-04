@@ -1,1 +1,0 @@
-export const getPersonNameLabel = record => record ? `${record.name} - ${record.phone} (${record.city})` : '';
