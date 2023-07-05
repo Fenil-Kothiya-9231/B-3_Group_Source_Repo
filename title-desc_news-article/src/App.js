@@ -46,6 +46,12 @@ const data = [
     title: "How many countries will participate in 2023 Cricket World Cup?",
     discription:
       "The tournament will be contested by 10 teams; England are the defending champions, having won the previous edition in 2019. It will be the first men's Cricket World Cup to be hosted solely by India, after co-hosting the 1987, 1996, and 2011 tournaments with other countries on the Indian subcontinent."
+  },
+  {
+    id: randomId(),
+    title: "How many countries will participate in 2023 Cricket World Cup?",
+    discription:
+      "The tournament will be contested by 10 teams; England are the defending champions, having won the previous edition in 2019. It will be the first men's Cricket World Cup to be hosted solely by India, after co-hosting the 1987, 1996, and 2011 tournaments with other countries on the Indian subcontinent."
   }
 ];
 
