@@ -1,0 +1,17 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.title {
+  border: gray solid 3px;
+  padding: 1rem;
+  font-family: calibri;
+  font-size: 20px;
+  font-style: italic;
+}
+input {
+  margin: 1rem;
+}
+.displayNone {
+  display: none;
+}
