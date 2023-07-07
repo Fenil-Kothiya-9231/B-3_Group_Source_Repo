@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div className='appdiv'>
-      <h1>C-Shape Problem</h1>
+      <h1>C-Shape Problem Version(v.1.0.fe)</h1>
       <div className="row">
         <Box onClick={() => handleClick(0)} isClicked={boxStates[0]} />
         <Box onClick={() => handleClick(1)} isClicked={boxStates[1]} />
